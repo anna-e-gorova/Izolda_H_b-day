@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.centr {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+header {
+  background: #ed56f0;
+}
+
+.greeting {
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.carousel {
+  margin-top: -8px;
+  /*& img
+     width: 100%
+     height: 100%*/
+}
+
+.carousel-inner {
+  height: 250px;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.dignities_box {
+  height: 250px;
+  -webkit-box-shadow: 6px 4px 35px rgba(56, 41, 50, 0.21);
+          box-shadow: 6px 4px 35px rgba(56, 41, 50, 0.21);
+}
+/*# sourceMappingURL=style.css.map */

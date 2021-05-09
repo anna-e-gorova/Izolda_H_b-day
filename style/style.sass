@@ -3,6 +3,7 @@
 *
     margin: 0
     padding: 0
+    font-family: 'Pacifico', cursive
 
 .centr
     padding-left: calc(50% - 570px)
@@ -35,11 +36,17 @@ header
     background-image: url(../img/pic_3.jpg)
 
 .dignities
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 20px 0 20px
+    gap: 20px
+    background: #DDA0DD
     &_box
-        height: 250px
-        box-shadow: 6px 4px 35px rgba(56, 41, 50, 0.21)
-
-@media (max-width: 767px)
-    .carousel
-        &-inner
-            height: 250px
+        height: 270px
+        box-shadow: 6px 4px 35px rgba(255, 255, 255, 0.21)
+        background: #D8BFD8
+    &_text
+        text-align: center
+        color: #2c0f0f
+        font-size: 25px

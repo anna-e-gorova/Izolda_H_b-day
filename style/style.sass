@@ -1,16 +1,166 @@
 @import var
 
+@keyframes color-change-5x
+    0%
+        background: #19dcea
+
+    25%
+        background: #b22cff
+
+    50%
+        background: #a05e87
+
+    75%
+        background: #c7a444
+
+    100%
+        background: #7ccf63
+
+@keyframes roll-in-left
+    0%
+        transform: translateX(-800px) rotate(-540deg)
+        opacity: 0
+
+    100%
+        transform: translateX(0) rotate(0deg)
+        opacity: 1
+
+@keyframes rotate-scale-up
+    0%
+        transform: scale(1) rotateZ(0)
+
+    50%
+        transform: scale(2) rotateZ(180deg)
+
+    100%
+        transform: scale(1) rotateZ(360deg)
+
+@keyframes rotate-center
+    0%
+        transform: rotate(0)
+
+    100%
+        transform: rotate(360deg)
+
+@keyframes slide-in-right
+    0%
+        transform: translateX(1000px)
+        opacity: 0
+
+    100%
+        transform: translateX(0)
+        opacity: 1
+
+@keyframes bounce-in-bck
+    0%
+        transform: scale(7)
+        animation-timing-function: ease-in
+        opacity: 0
+
+    38%
+        transform: scale(1)
+        animation-timing-function: ease-out
+        opacity: 1
+
+    55%
+        transform: scale(1.5)
+        animation-timing-function: ease-in
+
+    72%
+        transform: scale(1)
+        animation-timing-function: ease-out
+
+    81%
+        transform: scale(1.24)
+        animation-timing-function: ease-in
+
+    89%
+        transform: scale(1)
+        animation-timing-function: ease-out
+
+    95%
+        transform: scale(1.04)
+        animation-timing-function: ease-in
+
+    100%
+        transform: scale(1)
+        animation-timing-function: ease-out
+
+@keyframes slit-in-diagonal-2
+    0%
+        transform: translateZ(-800px) rotate3d(-1, 1, 0, -90deg)
+        animation-timing-function: ease-in
+        opacity: 0
+
+    54%
+        transform: translateZ(-160px) rotate3d(-1, 1, 0, -87deg)
+        animation-timing-function: ease-in-out
+        opacity: 1
+
+    100%
+        transform: translateZ(0) rotate3d(-1, 1, 0, 0)
+        animation-timing-function: ease-out
+
+@keyframes tracking-in-contract
+    0%
+        letter-spacing: 1em
+        opacity: 0
+
+    40%
+        opacity: 0.6
+
+    100%
+        letter-spacing: normal
+        opacity: 1
+
+@keyframes puff-in-hor
+    0%
+        transform: scaleX(2)
+        filter: blur(4px)
+        opacity: 0
+
+    100%
+        transform: scaleX(1)
+        filter: blur(0px)
+        opacity: 1
+
 *
     margin: 0
     padding: 0
     font-family: 'Pacifico', cursive
 
+.color-change-5x
+    animation: color-change-5x 8s linear infinite alternate both
+
+.roll-in-left
+    animation: roll-in-left 0.8s ease-out both
+
+.rotate-scale-up
+    animation: rotate-scale-up 0.8s linear both
+
+.rotate-center
+    animation: rotate-center 0.8s ease-in-out infinite both
+
+.slide-in-right
+    animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+.bounce-in-bck
+    animation: bounce-in-bck 0.8s both
+
+.slit-in-diagonal-2
+    animation: slit-in-diagonal-2 0.8s ease-out both
+
+.tracking-in-contract
+    animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+
+.puff-in-hor
+    animation: puff-in-hor 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both
+
 .centr
-    padding-left: calc(50% - 570px)
-    padding-right: calc(50% - 570px)
+    padding-left: calc(50% - 470px)
+    padding-right: calc(50% - 470px)
 
 header
-    background: $select_color
 
 .greeting
     text-align: center
@@ -20,7 +170,8 @@ header
 .carousel
     margin-top: -8px
     &-inner
-        height: 400px
+        height: 800px
+
     &-item
         height: 100%
         width: 100%
@@ -37,18 +188,18 @@ header
 
 .dignities
     display: flex
-    flex-direction: column
+    flex-wrap: wrap
     align-items: center
-    padding: 20px 0 20px
+    padding-top: 20px
     gap: 20px
-    background: #DDA0DD
+
     &_box
         height: 270px
         box-shadow: 6px 4px 35px rgba(255, 255, 255, 0.21)
-        background: #D8BFD8
+
     &_text
         text-align: center
-        color: #2c0f0f
+        color: #ffffff
         font-size: 25px
 
 .congratulations
@@ -58,3 +209,33 @@ header
     &_ps
         text-align: end
         margin: 10px
+
+@media (max-width: 1368px)
+    .carousel
+        &-inner
+            height: 600px
+
+@media (max-width: 1023px)
+    .centr
+        padding-left: calc(50% - 310px)
+        padding-right: calc(50% - 310px)
+    .carousel
+        &-inner
+            height: 400px
+
+@media (max-width: 767px)
+    .carousel
+        &-inner
+            height: 300px
+    .dignities
+        flex-direction: column
+
+@media (max-width: 539px)
+    .carousel
+        &-inner
+            height: 200px
+
+@media (max-width: 374px)
+    .carousel
+        &-inner
+            height: 150px

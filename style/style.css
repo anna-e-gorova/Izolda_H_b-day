@@ -75,4 +75,14 @@ header {
   color: #2c0f0f;
   font-size: 25px;
 }
+
+.congratulations_text {
+  margin: 20px;
+  text-align: justify;
+}
+
+.congratulations_ps {
+  text-align: end;
+  margin: 10px;
+}
 /*# sourceMappingURL=style.css.map */

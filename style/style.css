@@ -735,6 +735,24 @@
   padding-right: calc(50% - 470px);
 }
 
+video {
+  width: 70%;
+}
+
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
 .greeting {
   text-align: center;
   color: #ffffff;
@@ -832,6 +850,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  video {
+    width: 300px;
   }
 }
 
